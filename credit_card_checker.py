@@ -1,5 +1,9 @@
+## Algorithm to check whether a provided credit card number
+## is valid or not.
+
 import csv
 
+#validator function
 def validator(number):
     num_list = list(number)
     num_list = [int(num) for num in num_list]
@@ -19,7 +23,9 @@ def validator(number):
         status = "Invalid, Total is {0}".format(total)
     return status
 
+# main function
 if __name__ == "__main__":
+    # reading a sample csv file
     with open("samples.csv") as file:
         rows = csv.reader(file)
         next(rows)
